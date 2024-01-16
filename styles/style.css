@@ -32,12 +32,6 @@ nav {
     color: #FF5400;
 }
 
-.section-title {
-    color: #131318;
-    font-size: 36px;
-    font-weight: 800;
-}
-
 /* menu styles */
 .menu {
     display: flex;
@@ -80,6 +74,20 @@ nav {
     background-repeat: no-repeat;
 }
 
+.banner-title {
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 800;
+}
+
+.banner-description {
+    color: #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
 fieldset {
     display: flex;
     padding: 16px;
@@ -103,7 +111,8 @@ button {
     font-weight: 400;
 }
 
-.find-btn {
+/* primary button styles */
+.primary-btn {
     background-color: #FF5400;
     color: #FFF;
     font-size: 16px;
@@ -112,23 +121,76 @@ button {
 
 /* common styles */
 .section-title {
-    color: #FFF;
-    font-size: 64px;
+    color: #131318;
+    font-size: 40px;
     font-weight: 800;
 }
 
 .section-description {
-    color: #FFF;
-    text-align: center;
+    color: rgba(19, 19, 24, 0.70);
     font-size: 16px;
     font-weight: 400;
 }
 
 
+/* popular tours styles */
+.popular-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+}
 
+.popular-text {
+    margin-right: 50px;
+}
 
+/* destination styles */
+.destination-text {
+    text-align: center;
+    margin-bottom: 48px;
+}
 
+.img-item {
+    position: relative;
+    text-align: center;
+}
 
+.img-item img {
+    width: 100%;
+    height: auto;
+}
+
+.img-item h3 {
+    color: #FFF; 
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+.row-1 {
+    display: grid;
+    grid-template-columns: 573px 573px;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.row-1 img {
+    height: 300px;
+}
+
+.row-2 {
+    display: grid;
+    grid-template-columns: 374px 474px 274px;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.row-3 {
+    display: grid;
+    grid-template-columns: 473px 673px;
+    gap: 24px;
+    margin-bottom: 24px;
+}
 
 /* responsive design for mobile */
 @media screen and (max-width:576px) {
@@ -149,11 +211,12 @@ button {
         align-items: center;
     }
 
-    .section-title {
+    .banner-title {
         color: #FFF;
         font-size: 22px;
         font-weight: 800;
     }
+
     .banner-container {
         padding: 10px;
         text-align: center;
@@ -168,12 +231,31 @@ button {
     select,
     button {
         width: 255px;
-        margin-block: 5px;
-        border: none;
-        padding: 15px;
-        border-radius: 8px;
-        color: rgba(19, 19, 24, 0.50);
-        font-size: 16px;
-        font-weight: 400;
+    }
+
+    .popular-container {
+        flex-direction: column;
+    }
+
+    .popular-container img {
+        width: 95%;
+        margin-top: 24px;
+        padding-right: 25px;
+    }
+
+    .popular-text {
+        text-align: left;
+    }
+    .row-1{
+        display: flex;
+        flex-direction: column;
+    }
+    .row-2{
+        display: flex;
+        flex-direction: column;
+    }
+    .row-3{
+        display: flex;
+        flex-direction: column;
     }
 }
