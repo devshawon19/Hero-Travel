@@ -16,6 +16,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 48px;
 }
 
 /* web title styles */
@@ -152,8 +153,12 @@ button {
 }
 
 .img-item {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    position: relative;
 }
 
 .img-item img {
@@ -229,16 +234,18 @@ button {
 }
 
 /* Newsletter section styles */
-.newsletter-section{
+.newsletter-section {
     display: flex;
     align-items: center;
 }
-.newsletter-content{
+
+.newsletter-content {
     margin-right: 24px;
     border: 1px solid #FF5400;
     padding: 40px;
     border-radius: 16px;
 }
+
 .newsletter-content input {
     display: block;
     margin-block: 16px;
@@ -255,16 +262,68 @@ button {
     border-radius: 8px;
     background: #FF5400;
 }
+
 .newsletter-album {
     position: relative;
 }
 
-.discount-banner{
+.discount-banner {
     position: absolute;
     right: 10px;
     bottom: 10px;
 }
+/* bonus section starts */
+.black-friday-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 50px;
+}
+.card-bonus{
+    width: 390px 252px;
+    text-align: center;
+    border: 1px solid yellowgreen;
+}
+.card-header{
+    background-color: yellowgreen;
+    border-radius: 5px;
+    padding: 5px 80px;
+}
+.card-header h1 span{
+    font-size: 24px;
+    font-weight: 800;
+}
+.card-body h3{
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-body h3>span{
+    font-size: 24px;
+    font-weight: 800;
+}
+.book-button{
+    background-color: yellowgreen;
+    margin-bottom: 10px;
+}
+/* footer styles */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 110px;
+    text-align: center;
+}
 
+.fa-brands {
+    padding: 10px;
+}
+
+footer hr {
+    width: 872px;
+    height: 1px;
+    background-color: rgba(19, 19, 24, 0.10);
+    margin-block: 50px;
+}
 /* responsive design for mobile */
 @media screen and (max-width:576px) {
     body {
@@ -325,11 +384,9 @@ button {
     .popular-text {
         text-align: left;
     }
-
-    .img-item h3 {
-        display: none;
+    .img-item h3{
+        text-align: center;
     }
-
     .row-1 {
         display: flex;
         flex-direction: column;
@@ -358,24 +415,36 @@ button {
         width: 269px;
         text-align: left;
     }
-    .newsletter-section{
+
+    .newsletter-section {
         flex-direction: column;
     }
-    .newsletter-content{
+
+    .newsletter-content {
         text-align: left;
         margin-bottom: 16px;
         padding: 20px;
     }
+
     .newsletter-content input {
         width: 288px;
     }
+
     .newsletter-content>.primary-btn {
         width: 288px;
     }
-    .newsletter-img{
+
+    .newsletter-img {
         width: 335px;
     }
-    .discount-banner{
+
+    .discount-banner {
         width: 214px;
+    }
+    footer hr{
+        width: 335px;
+    }
+    .book-button{
+        width: 50%;
     }
 }
